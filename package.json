@@ -2,7 +2,7 @@
   "name": "nuxt_blog_template",
   "version": "1.0.0",
   "description": "nuxt_blog_template",
-  "author": "urawa72",
+  "author": "urawa72, u1",
   "private": true,
   "scripts": {
     "dev": "nuxt",

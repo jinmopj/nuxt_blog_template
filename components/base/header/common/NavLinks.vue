@@ -3,10 +3,11 @@
     <div class="navlinks-inner">
       <nuxt-link class="nav-link" to="/">Home</nuxt-link>
       <nuxt-link class="nav-link" to="/about">About</nuxt-link>
+      <nuxt-link class="nav-link" to="/issues">Issues</nuxt-link>
     </div>
     <div class="navlinks-icons">
-      <a class="link-icons" href="https://github.com/urawa72" target="_blank" rel="external nofollow noopener"><i class="fab fa-github"></i></a>
-      <a class="link-icons" href="https://twitter.com/urawa72" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
+      <a class="link-icons" href="https://github.com/xxx" target="_blank" rel="external nofollow noopener"><i class="fab fa-github"></i></a>
+      <a class="link-icons" href="https://twitter.com/xxx" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
 </template>

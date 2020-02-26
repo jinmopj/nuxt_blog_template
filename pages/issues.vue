@@ -1,38 +1,24 @@
 <template>
-  <article class="content">
-      <div class="post-title">{{ title }}</div>
-      <div class="post-meta">
-        <time>{{ params.date }}</time>
-      </div>
-      <div class="post-tags-wrap">
-        <div class="post-tag" v-for="tag in formatTags" v-bind:key="tag">
-          {{ tag }}
-        </div>
-      </div>
-      <SnsShare :title="shareTitle" />
-      <div class="post" v-html="bodyHtml"></div>
-  </article>
+  <div class="content">
+    <div class="page-title">Issues</div>
+    <div class="other-text" v-html="issues"></div>
+  </div>
 </template>
 
 <script>
-import { sourceFileArray } from '~/contents/posts/summary.json'
-import SnsShare from '~/components/posts/SnsShare.vue'
+import issues from '~/contents/others/issues.md'
 
 export default {
-  components: {
-    SnsShare
-  },
-  validate({ params }) {
-    return sourceFileArray.includes(`contents/posts/markdown/${params.date}_${params.slug}.md`)
-  },
-  asyncData({ params }) {
-    return Object.assign({}, require(`~/contents/posts/json/${params.date}_${params.slug}.json`), { params })
+  computed: {
+    issues() {
+      return issues
+    }
   },
   head() {
-    const title = this.title
+    const title = 'issuesのタイトル'
     const url = `${ process.env.baseUrl }${ this.$router.history.base }${ this.$route.path }`
-    const desc = this.description
-    const image = this.ogimage
+    const desc = 'issuesのディスクリプション'
+    const image = 'imgのパス'
     return {
       title: title,
       meta: [
@@ -45,41 +31,12 @@ export default {
       ],
       link: [{ rel: 'canonical', href: url }]
     }
-  },
-  computed: {
-    formatTags() {
-      return this.tags.split(',')
-    },
-    shareTitle() {
-      return this.title + " | xxx"
-    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.post-title {
-  font-size: 26px;
-  font-weight: 500;
-  padding: 20px 0;
-}
-.post-meta {
-  font-size: .8rem;
-}
-.post-tags-wrap {
-  display: flex;
-  padding: 10px 0;
-}
-.post-tag {
-  font-size: .8rem;
-  text-align: center;
-  padding: 0 .5rem;
-  margin: 0 .2rem;
-  border: 1px solid #d2d7e5;
-}
-.post {
-  padding: 40px 0;
-  font-weight: 300;
+.other-text {
   /deep/ {
     .hljs {
       overflow-x: auto;

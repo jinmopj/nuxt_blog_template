@@ -1,5 +1,5 @@
 ## Profile
-* ykoba (@urawa72)
+* xxx
 * Web Engineer
 
 <br>
