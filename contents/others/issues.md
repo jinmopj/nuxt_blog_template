@@ -8,6 +8,7 @@
 - markdown-it cssエラー - table レスポンシブ非対応
 - markdown-it htmlエラー - nuxt-link が付かない
 - markdown-it htmlエラー - rel="external nofollow noopener" が付かない
+- Date管理(created, updated) posts/_date/index.vue - データの取得と表示
 
 ## Markdown
 
