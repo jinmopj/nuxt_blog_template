@@ -1,7 +1,10 @@
 <template>
   <footer class="footer">
     <div class="footer-copyright">
-      Copyright nuxt_blog_template All Rights Reserved.
+      <p>
+        Copy Right &copy; 2019 - {{ new Date().getFullYear() }} <br>
+        <nuxt-link to="/"><a>xxx.com</a></nuxt-link> All Rights Reserved.
+      </p>
     </div>
   </footer>
 </template>

@@ -1,12 +1,12 @@
 <template>
   <div class="navlinks-wrap">
     <div class="navlinks-inner">
-      <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/about">About</a>
+      <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+      <nuxt-link class="nav-link" to="/about">About</nuxt-link>
     </div>
     <div class="navlinks-icons">
-      <a href="https://github.com/urawa72" class="link-icons" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://twitter.com/urawa72" class="link-icons" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a class="link-icons" href="https://github.com/urawa72" target="_blank" rel="external nofollow noopener"><i class="fab fa-github"></i></a>
+      <a class="link-icons" href="https://twitter.com/urawa72" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
 </template>

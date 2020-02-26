@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="post__title">
-      <a :href="formatUrl" class="post__link">{{ post.title }}</a>
+      <nuxt-link class="post__link" :to="formatUrl">{{ post.title }}</nuxt-link>
     </div>
     <div class="post__date">
       {{ formatDate }}

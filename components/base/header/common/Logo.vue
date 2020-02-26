@@ -1,7 +1,7 @@
 <template>
-  <a href="/">
+  <nuxt-link class="nav-link" to="/">
     <img src="~/assets/image/icon.png" class="logo-image" />
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

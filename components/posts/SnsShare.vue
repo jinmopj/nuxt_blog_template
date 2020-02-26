@@ -1,8 +1,8 @@
 <template>
   <div class="sns-list">
-    <a class="sns-list__link" :href="getUrl(twitter)" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-    <a class="sns-list__link" :href="getUrl(hatebu)" target="_blank" rel="nofollow"><b>B!</b></a>
-    <a class="sns-list__link" :href="getUrl(pocket)" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+    <a class="sns-list__link" :href="getUrl(twitter)" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
+    <a class="sns-list__link" :href="getUrl(hatebu)" target="_blank" rel="external nofollow noopener"><b>B!</b></a>
+    <a class="sns-list__link" :href="getUrl(pocket)" target="_blank" rel="external nofollow noopener"><i class="fab fa-get-pocket"></i></a>
   </div>
 </template>
 
