@@ -5,19 +5,22 @@
 ## Build Setup
 
 ``` bash
-# 必要なパッケージをインストール
-$ yarn install
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
 
 # .mdファイルを.jsonファイルに変換
-$ yarn md
-
-# 開発環境で表示確認
-$ yarn dev
-
-# 静的サイトを生成する
-$ yarn generate
+$ npm run md
 
 # Netlifyでは以下をbuild commandに設定する
-$ yarn deploy
+$ npm run deploy
 ```
-
