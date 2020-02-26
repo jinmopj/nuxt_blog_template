@@ -6,7 +6,7 @@
     <div class="post__date">
       {{ formatDate }}
     </div>
-    <div class="post__tags-wrap" v-for="tag in formatTags">
+    <div class="post__tags-wrap" v-for="tag in formatTags" v-bind:key="tag">
       <div class="post__tag">
         {{ tag }}
       </div>

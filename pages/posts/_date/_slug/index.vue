@@ -2,7 +2,8 @@
   <article class="content">
       <div class="post-title">{{ title }}</div>
       <div class="post-meta">
-        <time>{{ params.date }}</time>
+        <time>created: {{ params.date }}</time>
+        <time>updated: {{ updatedDate[0] }}</time>
       </div>
       <div class="post-tags-wrap">
         <div class="post-tag" v-for="tag in formatTags" v-bind:key="tag">
@@ -47,6 +48,9 @@ export default {
     }
   },
   computed: {
+    updatedDate() {
+      return this.updated_at.split('T')
+    },
     formatTags() {
       return this.tags.split(',')
     },
