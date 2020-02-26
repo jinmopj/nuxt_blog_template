@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import NavMobile from "~/components/NavMobile.vue"
-import NavDesktop from "~/components/NavDesktop.vue"
+import NavDesktop from "~/components/base/header/NavDesktop.vue"
+import NavMobile from "~/components/base/header/NavMobile.vue"
 
 export default {
   components: {
-    NavMobile,
-    NavDesktop
+    NavDesktop,
+    NavMobile
   }
 }
 </script>

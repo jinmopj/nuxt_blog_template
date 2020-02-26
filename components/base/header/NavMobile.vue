@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import NavSidebar from '~/components/NavSidebar.vue'
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/base/header/common/Logo.vue'
+import NavSidebar from '~/components/base/header/common/NavSidebar.vue'
 
 export default {
   name: "NavMobile",
   components: {
-    NavSidebar,
-    Logo
+    Logo,
+    NavSidebar
   },
   data() {
     return {

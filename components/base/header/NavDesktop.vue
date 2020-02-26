@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import NavLinks from '~/components/NavLinks.vue'
+import Logo from '~/components/base/header/common/Logo.vue'
+import NavLinks from '~/components/base/header/common/NavLinks.vue'
 
 export default {
   name: "NavDesktop",

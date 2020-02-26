@@ -12,7 +12,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import Post from '~/components/Post.vue'
+import Post from '~/components/index/postlist/Post.vue'
 
 export default {
   name: 'Posts',

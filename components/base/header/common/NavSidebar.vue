@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import NavLinks from '~/components/NavLinks.vue'
+import NavLinks from '~/components/base/header/common/NavLinks.vue'
 
 export default {
   name: "NavSidebar",

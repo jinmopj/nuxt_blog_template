@@ -16,7 +16,7 @@
 
 <script>
 import { sourceFileArray } from '../../../../contents/posts/summary.json'
-import SnsShare from '~/components/SnsShare.vue'
+import SnsShare from '~/components/posts/SnsShare.vue'
 
 export default {
   components: {
