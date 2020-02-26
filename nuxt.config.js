@@ -49,6 +49,7 @@ export default {
   },
   loading: { color: '#fff' },
   css: [
+    'normalize.css',
     { src: '~/assets/css/common.scss', lang: 'scss' },
     { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
     '@fortawesome/fontawesome-free/css/all.css'
