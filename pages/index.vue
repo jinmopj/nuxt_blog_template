@@ -11,6 +11,11 @@ import PostList from '~/components/index/PostList.vue'
 export default {
   components: {
     PostList
+  },
+  head() {
+    return {
+      titleTemplate: null,
+    }
   }
 }
 </script>
