@@ -1,6 +1,6 @@
 ## Issues
 
-- markdown-it cssエラー about.vue - code ```background: #322931;```
+- markdown-it cssエラー issues.vue - code ```background: #322931;```
 - markdown-it cssエラー - table レスポンシブ非対応
 - markdown-it htmlエラー - nuxt-link が付かない
 - markdown-it htmlエラー - rel="external nofollow noopener" が付かない
