@@ -3,7 +3,7 @@
     <div class="footer-copyright">
       <p>
         Copy Right &copy; 2019 - {{ new Date().getFullYear() }} <br>
-        <nuxt-link to="/"><a>xxx.com</a></nuxt-link> All Rights Reserved.
+        <nuxt-link to="/"><a>{{ baseName }}</a></nuxt-link> All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  computed: {
+    baseName() {
+      return process.env.baseName
+    }
+  }
 }
 </script>
 

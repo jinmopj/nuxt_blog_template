@@ -15,7 +15,7 @@ const cloundName = process.env.CLOUND_NAME || 'xxxxxx'
 const cloudinary_param = process.env.CLOUNDINARY_PARAM || 'w_auto,q_auto:eco,f_auto'
 const imagePathId = process.env.IMAGE_PATH_ID || 'v1'
 const ogDirectoryPath = process.env.OG_DIRECTORY_PATH || 'xxxxxx/xxxxxx'
-const faviconDirectoryPath = process.env.OG_DIRECTORY_PATH || 'xxxxxx/xxxxxx'
+const faviconDirectoryPath = process.env.FAVICON_DIRECTORY_PATH || 'xxxxxx/xxxxxx'
 
 const ogImagePath = `${ cloudinaryDomain }/${ cloundName }/${ cloudinary_param }/${ imagePathId }/${ ogDirectoryPath }/${ ogImage }`
 const iconPath = `${ cloudinaryDomain }/${ cloundName }/${ cloudinary_param }/${ imagePathId }/${ faviconDirectoryPath }/${ iconImage }`
