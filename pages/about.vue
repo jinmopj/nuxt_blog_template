@@ -16,9 +16,10 @@ export default {
   },
   head() {
     const title = 'aboutのタイトル'
-    const url = `${ process.env.baseUrl }${ this.$router.history.base }${ this.$route.path }`
     const desc = 'aboutのディスクリプション'
-    const image = 'imgのパス'
+    const ogImage = 'xxx.png'
+    const url = `${ process.env.baseUrl }${ this.$router.history.base }${ this.$route.path }`
+    const ogImagePath = `${ process.env.cloudinaryDomain }/${ process.env.cloundName }/${ process.env.cloudinary_param }/${ process.env.imagePathId }/${ process.env.ogDirectoryPath }/${ ogImage }`
     return {
       title: title,
       meta: [
@@ -27,7 +28,7 @@ export default {
         { hid: 'og:url', property: 'og:url', content: url },
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:description', property: 'og:description', content: desc },
-        { hid: 'og:image', property: 'og:image', content: image },
+        { hid: 'og:image', property: 'og:image', content: ogImagePath },
       ],
       link: [{ rel: 'canonical', href: url }]
     }

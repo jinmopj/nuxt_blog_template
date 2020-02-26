@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       params: [
-        `https://xxx.com${this.$route.path}`,
+        `${ process.env.baseUrl }${ this.$route.path }`,
         this.title
       ],
       twitter: "https://twitter.com/intent/tweet?url={0}&amp;text={1}",

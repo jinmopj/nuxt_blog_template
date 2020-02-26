@@ -7,7 +7,7 @@
       "updated_at": "2020-01-02T00:00:00.000Z",
       "draft": false,
       "description": "Nuxt.jsでつくったブログのテンプレート",
-      "ogimage": "imgのパス",
+      "ogImage": "xxx.png",
       "tags": "JavaScript,Nuxt.js",
       "dir": "contents/posts/json",
       "base": "2020-01-01_sample-md.json",

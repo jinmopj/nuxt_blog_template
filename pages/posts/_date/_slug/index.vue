@@ -33,7 +33,7 @@ export default {
     const title = this.title
     const url = `${ process.env.baseUrl }${ this.$router.history.base }${ this.$route.path }`
     const desc = this.description
-    const image = this.ogimage
+    const ogImagePath = `${ process.env.cloudinaryDomain }/${ process.env.cloundName }/${ process.env.cloudinary_param }/${ process.env.imagePathId }/${ process.env.ogDirectoryPath }/${ this.ogImage }`
     return {
       title: title,
       meta: [
@@ -42,7 +42,7 @@ export default {
         { hid: 'og:url', property: 'og:url', content: url },
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:description', property: 'og:description', content: desc },
-        { hid: 'og:image', property: 'og:image', content: image },
+        { hid: 'og:image', property: 'og:image', content: ogImagePath },
       ],
       link: [{ rel: 'canonical', href: url }]
     }
@@ -55,7 +55,7 @@ export default {
       return this.tags.split(',')
     },
     shareTitle() {
-      return this.title + " | xxx"
+      return this.title + " | " + process.env.baseName
     }
   }
 }

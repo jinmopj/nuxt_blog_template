@@ -1,9 +1,5 @@
 ## Issues
 
-- 変数化 NavLinks.vue - ```href="https://github.com/xxx"```
-- 変数化 NavLinks.vue - ```href="https://twitter.com/xxx"```
-- 変数化 SnsShare.vue - ```params https://xxx.com${this.$route.path}```
-- 変数化 posts/_date/index.vue - ```return this.title + " | xxx"```
 - markdown-it cssエラー about.vue - code ```background: #322931;```
 - markdown-it cssエラー - table レスポンシブ非対応
 - markdown-it htmlエラー - nuxt-link が付かない

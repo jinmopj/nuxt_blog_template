@@ -2,10 +2,24 @@ const baseUrl = process.env.BASE_URL || 'https://xxx.com'
 const baseName = process.env.BASE_NAME || 'xxx'
 const baseDescription = process.env.BASE_DESCRIPTION || 'サイトのディスクリプション'
 const baseKeywords = process.env.BASE_KEYWORDS || 'キーワード1, キーワード2, キーワード3, キーワード4, キーワード5'
-const baseOGImage = process.env.BASE_OG_IMAGE || 'imgのパス'
-const baseIcon = process.env.BASE_ICON || '~/assets/favicon/favicon.ico'
-const baseAppleTouchIcon = process.env.BASE_APPLE_TOUCH_ICON || '~/assets/favicon/apple-touch-icon.png'
 const baseGoogleAnalytics = process.env.BASE_GOOGLE_ANALYTICS || 'UA-XXXXXX-X'
+const githubUrl = process.env.GITHUB_URL || 'https://github.com/xxx'
+const twitterUrl = process.env.TWITTER_URL || 'https://twitter.com/xxx'
+
+const ogImage = process.env.OG_IMAGE || 'xxx.png'
+const iconImage = process.env.ICON_IMAGE || 'favicon.ico'
+const AppleTouchIconImage = process.env.APPLE_TOUCH_ICON_IMAGE || 'apple-touch-icon.png'
+
+const cloudinaryDomain = process.env.CLOUNDINARY_DOMAIN || 'https://res.cloudinary.com'
+const cloundName = process.env.CLOUND_NAME || 'xxxxxx'
+const cloudinary_param = process.env.CLOUNDINARY_PARAM || 'w_auto,q_auto:eco,f_auto'
+const imagePathId = process.env.IMAGE_PATH_ID || 'v1'
+const ogDirectoryPath = process.env.OG_DIRECTORY_PATH || 'xxxxxx/xxxxxx'
+const faviconDirectoryPath = process.env.OG_DIRECTORY_PATH || 'xxxxxx/xxxxxx'
+
+const ogImagePath = `${ cloudinaryDomain }/${ cloundName }/${ cloudinary_param }/${ imagePathId }/${ ogDirectoryPath }/${ ogImage }`
+const iconPath = `${ cloudinaryDomain }/${ cloundName }/${ cloudinary_param }/${ imagePathId }/${ faviconDirectoryPath }/${ iconImage }`
+const AppleTouchIconPath = `${ cloudinaryDomain }/${ cloundName }/${ cloudinary_param }/${ imagePathId }/${ faviconDirectoryPath }/${ AppleTouchIconImage }`
 
 const { sourceFileArray } = require('./contents/posts/summary.json')
 
@@ -39,12 +53,12 @@ export default {
       { hid: 'og:url', property: 'og:url', content: baseUrl },
       { hid: 'og:title', property: 'og:title', content: baseName },
       { hid: 'og:description', property: 'og:description', content: baseDescription },
-      { hid: 'og:image', property: 'og:image', content: baseOGImage },
+      { hid: 'og:image', property: 'og:image', content: ogImagePath },
     ],
     link: [
       /* favicon */
-      { rel: 'icon', type: 'image/x-icon', href: baseIcon },
-      { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: baseAppleTouchIcon },
+      { rel: 'icon', type: 'image/x-icon', href: iconPath },
+      { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: AppleTouchIconPath },
     ]
   },
   loading: { color: '#fff' },
@@ -70,6 +84,17 @@ export default {
     scss: [
       '~/assets/css/_mixins.scss'
       ]
+  },
+  env: {
+    baseUrl: baseUrl,
+    baseName: baseName,
+    githubUrl: githubUrl,
+    twitterUrl: twitterUrl,
+    cloudinaryDomain: cloudinaryDomain,
+    cloundName: cloundName,
+    cloudinary_param: cloudinary_param,
+    imagePathId: imagePathId,
+    ogDirectoryPath: ogDirectoryPath,
   },
   markdownit: {
     preset: 'default',

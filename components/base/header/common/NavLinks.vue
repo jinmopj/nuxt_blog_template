@@ -6,8 +6,8 @@
       <nuxt-link class="nav-link" to="/issues">Issues</nuxt-link>
     </div>
     <div class="navlinks-icons">
-      <a class="link-icons" href="https://github.com/xxx" target="_blank" rel="external nofollow noopener"><i class="fab fa-github"></i></a>
-      <a class="link-icons" href="https://twitter.com/xxx" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
+      <a class="link-icons" :href="githubURL" target="_blank" rel="external nofollow noopener"><i class="fab fa-github"></i></a>
+      <a class="link-icons" :href="twitterURL" target="_blank" rel="external nofollow noopener"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
 </template>
@@ -15,7 +15,16 @@
 <script>
 export default {
   name: "NavLinks",
+  computed: {
+    githubURL() {
+      return process.env.githubUrl
+    },
+    twitterURL() {
+      return process.env.twitterUrl
+    }
+  }
 }
+
 </script>
 
 <style lang="scss" scoped>
