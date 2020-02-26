@@ -1,5 +1,6 @@
 const baseUrl = process.env.BASE_URL || 'https://xxx.com'
 const baseName = process.env.BASE_NAME || 'xxx'
+const startYear = process.env.startYear || '2019'
 const baseDescription = process.env.BASE_DESCRIPTION || 'サイトのディスクリプション'
 const baseKeywords = process.env.BASE_KEYWORDS || 'キーワード1, キーワード2, キーワード3, キーワード4, キーワード5'
 const baseGoogleAnalytics = process.env.BASE_GOOGLE_ANALYTICS || 'UA-XXXXXX-X'
@@ -88,6 +89,7 @@ export default {
   env: {
     baseUrl: baseUrl,
     baseName: baseName,
+    startYear: startYear,
     githubUrl: githubUrl,
     twitterUrl: twitterUrl,
     cloudinaryDomain: cloudinaryDomain,
