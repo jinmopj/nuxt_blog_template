@@ -109,7 +109,7 @@ export default {
     path: '/sitemap.xml',
     hostname: baseUrl,
     exclude: [
-      // '/about'
+      '/issues'
     ],
     routes: generateDynamicRoutes
   },
