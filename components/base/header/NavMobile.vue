@@ -8,7 +8,7 @@
       </div>
       <Logo />
     </div>
-    <NavSidebar :isOpen="isOpen" />
+    <NavSidebar :isOpen="isOpen" @parentMethod="closeSidebar" />
     <div v-if="isOpen" class="mobile-nav-bg" @click="closeSidebar"></div>
   </div>
 </template>

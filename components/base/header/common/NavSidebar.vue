@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-wrap" :class="{ 'open' : isOpen }">
-    <NavLinks />
+    <NavLinks @childMethod="$listeners['parentMethod']" />
   </div>
 </template>
 

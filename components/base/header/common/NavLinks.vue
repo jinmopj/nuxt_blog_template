@@ -1,6 +1,7 @@
 <template>
   <div class="navlinks-wrap">
-    <div class="navlinks-inner">
+    <div class="navlinks-inner" @click="closeSidebar">
+      <nuxt-link class="nav-link " to=""><i class="fas fa-times"></i></nuxt-link>
       <nuxt-link class="nav-link" to="/">Home</nuxt-link>
       <nuxt-link class="nav-link" to="/about">About</nuxt-link>
       <nuxt-link class="nav-link" to="/issues">Issues</nuxt-link>
@@ -21,6 +22,11 @@ export default {
     },
     twitterUrl() {
       return process.env.twitterUrl
+    }
+  },
+  methods: {
+    closeSidebar() {
+      this.$emit('childMethod', this.isOpen = false)
     }
   }
 }
@@ -77,5 +83,11 @@ export default {
   font-size: 1.5rem;
   color: #444;
   margin-right: 10px;
+}
+/* mobileの時のみ非表示ボタンを表示 */
+.mobile-nav {
+  @include mq-up(md) {
+    display: none;
+  }
 }
 </style>
