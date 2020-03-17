@@ -1,7 +1,7 @@
 <template>
   <div class="navlinks-wrap">
     <div class="navlinks-inner" @click="closeSidebar">
-      <nuxt-link class="nav-link " to=""><i class="fas fa-times"></i></nuxt-link>
+      <nuxt-link class="nav-link mobile-nav" to=""><i class="fas fa-times"></i></nuxt-link>
       <nuxt-link class="nav-link" to="/">Home</nuxt-link>
       <nuxt-link class="nav-link" to="/about">About</nuxt-link>
       <nuxt-link class="nav-link" to="/issues">Issues</nuxt-link>
