@@ -1,7 +1,7 @@
 <template>
   <div class="post-list">
     <template v-if="postList.length > 0">
-      <Post v-for="post in postList" :post="post":key="post.id" />
+      <Post v-for="post in postList" :post="post" :key="post.id" />
       <div class="post-list__more" v-if="isActive" @click="getMore()">More...</div>
     </template>
     <template v-else>
